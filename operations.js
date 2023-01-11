@@ -4,10 +4,12 @@ var currentSideWidth = parseInt(document.getElementsByClassName("sidenav")[0].of
 
 function openNav() {
     document.getElementById("myNav").style.width = "100%";
+    document.getElementById("myNav").style.height = "100%";
   }
   
   function closeNav() {
     document.getElementById("myNav").style.width = "0%";
+    document.getElementById("myNav").style.height="0%";
   }
 
 document.getElementById("linkedin").addEventListener("click",function()
@@ -93,6 +95,7 @@ function showContent(name)
       {
         document.getElementById(nameArray[i]).style.display = "none";
       }
+      closeNav()
   }
 }
 

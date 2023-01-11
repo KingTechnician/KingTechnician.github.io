@@ -13,7 +13,7 @@
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
             <div class="overlay-content">
                 <a id ="aboutButton" onclick="showContent('about')" href="#about">About Me</a>
-                <a id="myresume" onclick="showContent('myresume')" href="#myresume">My Resume</a>
+                <a onclick="showContent('myresume')" href="#myresume">My Resume</a>
                 <a class="projectCollapse" data-bs-toggle = "collapse" href="#projects" role="button" aria-expanded="false" aria-controls="projects">Projects <i class="rotate fa fa-caret-down"></i></a>
                 <div class="container collapse" id="projects">
                     <a onclick="showContent('priam')" href="#priam">Priam</a>
@@ -56,7 +56,7 @@
             </div>
             <div class="contentSection p-3">
                 <a id ="aboutButton" onclick="showContent('about')" href="#about">About Me</a>
-                <a id="myresume" onclick="showContent('myresume')" href="#myresume">My Resume</a>
+                <a onclick="showContent('myresume')" href="#myresume">My Resume</a>
                 <a class="projectCollapse" data-bs-toggle = "collapse" href="#projects" role="button" aria-expanded="false" aria-controls="projects">Projects <i class="rotate fa fa-caret-down"></i></a>
                 <div class="container collapse" id="projects">
                     <a onclick="showContent('priam')" href="#priam">Priam</a>
@@ -172,5 +172,12 @@
                 </div>
             <iframe src="https://drive.google.com/file/d/1LhLP89nghNIpWnMlel2Z_OeqXoGlP9mR/preview" width="50%" height="90%" allow="autoplay"></iframe>
         </div>
+        <footer>
+            <div class="fixed-action-btn" style="bottom: 25px; right: 25px;">
+              <a class="btn-floating btn-lg turquoise" id="openNav">
+                <i class="fas fa-bars"></i>
+              </a>
+            </div>
+          </footer>
         <script src="operations.js"></script>
 </body>
