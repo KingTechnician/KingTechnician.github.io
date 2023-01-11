@@ -88,6 +88,27 @@ function prepareCollapseAnimation(className)
     }
 }
 
+var menuButton = document.getElementById("menuButton");
+
+menuButton.addEventListener("click",function()
+{
+    if(menuButton.style.transform!=="rotate(180deg)")
+    {
+        menuButton.style.transform="rotate(180deg)"
+        menuButton.style.MozTransform="rotate(180deg)"
+        menuButton.style.WebkitTransform="rotate(180deg)"
+        menuButton.style.msTransform="rotate(180deg)"
+        menuButton.style.transition="transform 0.2s"
+    }
+    else
+    {
+        menuButton.style.transform="";
+        menuButton.style.MozTransform=""
+        menuButton.style.WebkitTransform=""
+        menuButton.style.msTransform=""
+    }
+});
+
 function showContent(name)
 {
   for (var i = 0; i < nameArray.length; i++)
