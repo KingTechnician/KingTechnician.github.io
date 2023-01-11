@@ -3,11 +3,35 @@
     <title>Isaiah Freeman</title>
 </head>
 <body>
+    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
     <body>
+        <div id="myNav" class="overlay">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <div class="overlay-content">
+                <a id ="aboutButton" onclick="showContent('about')" href="#about">About Me</a>
+                <a id="myresume" onclick="showContent('myresume')" href="#myresume">My Resume</a>
+                <a class="projectCollapse" data-bs-toggle = "collapse" href="#projects" role="button" aria-expanded="false" aria-controls="projects">Projects <i class="rotate fa fa-caret-down"></i></a>
+                <div class="container collapse" id="projects">
+                    <a onclick="showContent('priam')" href="#priam">Priam</a>
+                    <a onclick="showContent('myjournal')" href="#myjournal">MyJournal</a>
+                    <a onclick="showContent('healthwhiz')" href="#healthwhiz">Health Whiz</a>
+                    <a onclick="showContent('haro')" href="#haro">Haro</a>
+                </div>
+                <a class="researchCollapse" data-bs-toggle = "collapse" href="#research" role="button" aria-expanded="false" aria-controls="research">Research <i class="rotate fa fa-caret-down"></i></a>
+                <div class="container collapse" id="research">
+                    <a onclick = "showContent('fwdemodel')" href="#fwdemodel">FWDE Model</a>
+                </div>
+                <a class="publicationsCollapse" data-bs-toggle="collapse"href="#publications" role="button" aria-expanded="false" aria-controls="publications">Publications <i class="rotate fa fa-caret-down"></i></a>
+                <div class="container collapse" id="publications">
+                    <a onclick="showContent('visionsofchange')" href="#visionsofchange">Change Forward 2021-22 - Visions of Change</a>
+                </div>
+                <a onclick="showContent('contact')" href="#contact">Contact</a>
+            </div>
+          </div>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <div class="sidenav d-flex flex-column flex-shrink-0 p-0">
             <div class="container personaContainer">
@@ -31,8 +55,8 @@
                 </div>
             </div>
             <div class="contentSection p-3">
-                <a onclick="showContent('about')" href="#about">About Me</a>
-                <a onclick="showContent('myresume')" href="#myresume">My Resume</a>
+                <a id ="aboutButton" onclick="showContent('about')" href="#about">About Me</a>
+                <a id="myresume" onclick="showContent('myresume')" href="#myresume">My Resume</a>
                 <a class="projectCollapse" data-bs-toggle = "collapse" href="#projects" role="button" aria-expanded="false" aria-controls="projects">Projects <i class="rotate fa fa-caret-down"></i></a>
                 <div class="container collapse" id="projects">
                     <a onclick="showContent('priam')" href="#priam">Priam</a>

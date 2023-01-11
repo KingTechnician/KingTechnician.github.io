@@ -2,6 +2,14 @@
 var fullWidth = window.outerWidth;
 var currentSideWidth = parseInt(document.getElementsByClassName("sidenav")[0].offsetWidth)+25;
 
+function openNav() {
+    document.getElementById("myNav").style.width = "100%";
+  }
+  
+  function closeNav() {
+    document.getElementById("myNav").style.width = "0%";
+  }
+
 document.getElementById("linkedin").addEventListener("click",function()
 {
     window.open("https://www.linkedin.com/in/isaiah-freeman-3471b2211",target="_blank",rel="noopener noreferrer");
@@ -17,7 +25,7 @@ function responsiveLayout()
     document.querySelectorAll(".content").forEach(function(element)
     {
         //element.style.marginLeft =(currentSideWidth)+"px";
-        currentSideWidth = parseInt(element.style.marginLeft);
+        //currentSideWidth = parseInt(element.style.marginLeft);
     })
 }
 
