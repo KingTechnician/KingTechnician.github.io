@@ -177,7 +177,7 @@ body {
   z-index: 1;
   top: 0;
   left: 0;
-  background: linear-gradient(-90deg,#6c7088,#4F4F51);
+  background: transparent;
   overflow-x: hidden;
   transition: 0.5s;
 }
@@ -225,9 +225,13 @@ body {
   position:absolute;
 }
 
-.thisButton
+.menuButton
 {
   position:fixed;
   bottom:0;
-  left:40%;
+  right:1%;
+  width:fit-content;
+  height:fit-content;
+  font-size:40px;
+  border-radius:50%;
 }

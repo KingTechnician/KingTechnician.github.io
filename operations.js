@@ -2,16 +2,6 @@
 var fullWidth = window.outerWidth;
 var currentSideWidth = parseInt(document.getElementsByClassName("sidenav")[0].offsetWidth)+25;
 
-function openNav() {
-    document.getElementById("myNav").style.width = "100%";
-    document.getElementById("myNav").style.height = "100%";
-  }
-  
-  function closeNav() {
-    document.getElementById("myNav").style.width = "0%";
-    document.getElementById("myNav").style.height="0%";
-  }
-
 document.getElementById("linkedin").addEventListener("click",function()
 {
     window.open("https://www.linkedin.com/in/isaiah-freeman-3471b2211",target="_blank",rel="noopener noreferrer");
@@ -40,6 +30,8 @@ $(document).ready(function()
 
 var selectionColors = ["#794242","#425a79"]
 
+var primaryColor = "#6c7088"
+
 var secondaryColor = "#4F4F51"
 //#4F4F51 - 79, 79, 81
 
@@ -55,6 +47,20 @@ var colorDictionary = {"healthwhiz":"#794242","myjournal":"#425a79","haro":"#5e4
 //#6c7088 - 108, 112, 136
 //#527942 - 82, 121, 66
 //var colorRGBDictionary = {"healthwhiz":{r:121,g:66,b:66},"myjournal":{r:66,g:90,b:121},"haro":{r:94,g:66,b:121},"priam":{r:56,g:75,b:180},"about":{r:108,g:112,b:136},"fwdemodel":{r:82,g:121,b:66}}
+
+function openNav() {
+    document.getElementById("myNav").style.width = "100%";
+    document.getElementById("myNav").style.height = "100%";
+    document.getElementById("myNav").style.background="linear-gradient(-90deg, "+primaryColor+", "+secondaryColor+")";
+  }
+  
+  function closeNav() {
+    document.getElementById("myNav").style.width = "0%";
+    document.getElementById("myNav").style.height="0%";
+    document.getElementById("myNav").style.background="transparent";
+  }
+
+
 function prepareCollapseAnimation(className)
 {
     var collapseElements = document.getElementsByClassName(className);
@@ -90,14 +96,19 @@ function showContent(name)
       {
           document.getElementById(nameArray[i]).style.display = "block";
           document.querySelector("body").style.background="linear-gradient(-90deg, "+colorDictionary[nameArray[i]]+", "+secondaryColor+")";
+          closeNav()
+          document.getElementById("myNav").style.background="linear-gradient(-90deg, "+colorDictionary[nameArray[i]]+", "+secondaryColor+")";
+          primaryColor = colorDictionary[nameArray[i]]
       }
       else
       {
         document.getElementById(nameArray[i]).style.display = "none";
+        closeNav()
+        document.getElementById("myNav").style.background="linear-gradient(-90deg, "+colorDictionary[nameArray[i]]+", "+secondaryColor+")";
       }
-      closeNav()
   }
 }
+
 
 prepareCollapseAnimation("projectCollapse");
 
