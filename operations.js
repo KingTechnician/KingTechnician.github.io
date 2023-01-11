@@ -16,7 +16,7 @@ function responsiveLayout()
 {
     document.querySelectorAll(".content").forEach(function(element)
     {
-        element.style.marginLeft =(currentSideWidth)+"px";
+        //element.style.marginLeft =(currentSideWidth)+"px";
         currentSideWidth = parseInt(element.style.marginLeft);
     })
 }
