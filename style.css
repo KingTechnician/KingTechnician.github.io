@@ -45,7 +45,7 @@ body {
     font-size: 28px; /* Increased text to enable scrolling */
     padding: 0px 10px;
   }
- .priam,.haro,.healthwhiz,.myjournal,.fwdemodel,.myresume,.visionsofchange,.contact
+ .priam,.haro,.healthwhiz,.nei,.fwdemodel,.myresume,.visionsofchange,.contact
   {
     /*margin-left:500px;*/
     display:none;

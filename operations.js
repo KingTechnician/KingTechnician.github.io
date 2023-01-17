@@ -35,18 +35,18 @@ var primaryColor = "#6c7088"
 var secondaryColor = "#4F4F51"
 //#4F4F51 - 79, 79, 81
 
-var nameArray = ["healthwhiz","myjournal","haro","priam","about","fwdemodel","visionsofchange","myresume","contact"]
+var nameArray = ["healthwhiz","nei","haro","priam","about","fwdemodel","visionsofchange","myresume","contact"]
 
 var currentColor = undefined
 
-var colorDictionary = {"healthwhiz":"#794242","myjournal":"#425a79","haro":"#5e4279","priam":"#384bb4","about":"#6c7088","fwdemodel":"#527942","visionsofchange":"#795042","myresume":"#794242","contact":"#a33b4a"}
+var colorDictionary = {"healthwhiz":"#794242","nei":"#425a79","haro":"#5e4279","priam":"#384bb4","about":"#6c7088","fwdemodel":"#527942","visionsofchange":"#795042","myresume":"#794242","contact":"#a33b4a"}
 //#794242 - 121, 66, 66
 //#425a79 - 66, 90, 121
 //#5e4279 - 94, 66, 121
 //#384bb4 - 56, 75, 180
 //#6c7088 - 108, 112, 136
 //#527942 - 82, 121, 66
-//var colorRGBDictionary = {"healthwhiz":{r:121,g:66,b:66},"myjournal":{r:66,g:90,b:121},"haro":{r:94,g:66,b:121},"priam":{r:56,g:75,b:180},"about":{r:108,g:112,b:136},"fwdemodel":{r:82,g:121,b:66}}
+//var colorRGBDictionary = {"healthwhiz":{r:121,g:66,b:66},"nei":{r:66,g:90,b:121},"haro":{r:94,g:66,b:121},"priam":{r:56,g:75,b:180},"about":{r:108,g:112,b:136},"fwdemodel":{r:82,g:121,b:66}}
 
 function openNav() {
     document.getElementById("myNav").style.width = "100%";
