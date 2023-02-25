@@ -1,3 +1,15 @@
+//Delete everything in caches
+
+function deleteCaches()
+{
+    caches.keys().then(function(names) {
+        for (let name of names)
+        caches.delete(name);
+    });
+}
+
+deleteCaches()
+
 
 var fullWidth = window.outerWidth;
 var currentSideWidth = parseInt(document.getElementsByClassName("sidenav")[0].offsetWidth)+25;
