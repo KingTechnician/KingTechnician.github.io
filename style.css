@@ -62,11 +62,21 @@ body {
     text-align:center;
   }
 
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
   .aboutContainer
   {
     background-color:rgba(27, 31, 34, 0.85);
     border-radius:6px;
     text-align:left;
+    animation: fadeIn 1s;
   }
   .content
   {
