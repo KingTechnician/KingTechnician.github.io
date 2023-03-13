@@ -68,7 +68,35 @@ body {
     }
     100% {
       opacity: 1;
+
     }
+  }
+
+  @keyframes slideAndFade {
+    0% {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+
+  .fade-text {
+    animation: slideAndFade 1s;}
+
+  .fade-text2{
+    animation: slideAndFade 1.5s;
+  }
+
+  .fade-text3{
+    animation: slideAndFade 2s;
+  }
+
+  .fade-text4{
+    animation: slideAndFade 2.5s;
   }
 
   .aboutContainer
@@ -248,3 +276,4 @@ body {
   color:rgba(255, 255, 255, 0.822);
   border: 1px solid rgba(27,31,24,0.85);
 }
+
