@@ -8,8 +8,18 @@ function deleteCaches()
     });
 }
 
+
 deleteCaches()
 
+$(document).ready(function()
+{
+    setTimeout(()=>{$("#splash-screen").fadeOut(800)},1000);
+    //Set all aboutContainer display to block
+    setTimeout(()=>
+    {
+        $(".aboutContainer").css("display","block");
+        $(".menuButton").css("display","block")},1000);
+})
 
 var fullWidth = window.outerWidth;
 var currentSideWidth = parseInt(document.getElementsByClassName("sidenav")[0].offsetWidth)+25;

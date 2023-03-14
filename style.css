@@ -83,7 +83,35 @@ body {
     }
   }
 
+  @keyframes slideLeftAndFade {
+    0% {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
 
+  @keyframes slideRightAndFade {
+    0% {
+      opacity: 0;
+      transform: translateX(-50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+
+  .fade-k{
+    animation: slideLeftAndFade 1s;
+  }
+  .fade-t{
+    animation: slideRightAndFade 1s;
+  }
   .fade-text {
     animation: slideAndFade 1s;}
 
@@ -101,6 +129,7 @@ body {
 
   .aboutContainer
   {
+    display:none;
     background-color:rgba(27, 31, 34, 0.85);
     border-radius:6px;
     text-align:left;
@@ -266,6 +295,7 @@ body {
 .menuButton
 {
   position:fixed;
+  display:none;
   bottom:0;
   right:1%;
   width:fit-content;
@@ -276,4 +306,55 @@ body {
   color:rgba(255, 255, 255, 0.822);
   border: 1px solid rgba(27,31,24,0.85);
 }
+
+#splash-screen{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  display:flex;
+  overflow:hidden;
+  align-items:center;
+  justify-content:center;
+  background-color:rgba(15, 12, 12, 0.99);
+}
+
+#splash-screen img{
+  max-width:100%;
+  max-height:100%;
+  animation: fadeIn 2s;
+}
+
+
+
+#kingtech {
+  font-size: 36px;
+  position: relative;}
+
+.invisible {
+  opacity:0;
+  animation: fadeIn 1s forwards;
+}
+
+@keyframes appearAndMove{
+  0%{
+    visibility:hidden;
+  }
+  100%{
+    visibility:visible;
+  }
+}
+
+@keyframes slideLeft {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+
+
 
