@@ -21,8 +21,8 @@
                 <a class="projectCollapse" data-bs-toggle = "collapse" href="#projects" role="button" aria-expanded="false" aria-controls="projects">Projects <i class="rotate fa fa-caret-down"></i></a>
                 <div class="container collapse" id="projects">
                     <a onclick="showContent('priam')" href="#priam">Priam</a>
-                    <a onclick="showContent('neit')" href="#neit">Neit</a>
-                    <a onclick="showContent('healthwhiz')" href="#healthwhiz">Health Whiz</a>
+                    <a onclick="showContent('emissiowl')" href="#emissiowl">Emissiowl</a>
+                    <a onclick="showContent('ispeak')" href="#ispeak">Ispeak</a>
                     <a onclick="showContent('haro')" href="#haro">Haro</a>
                 </div>
                 <a class="researchCollapse" data-bs-toggle = "collapse" href="#research" role="button" aria-expanded="false" aria-controls="research">Research <i class="rotate fa fa-caret-down"></i></a>
@@ -32,6 +32,10 @@
                 <a class="publicationsCollapse" data-bs-toggle="collapse"href="#publications" role="button" aria-expanded="false" aria-controls="publications">Publications <i class="rotate fa fa-caret-down"></i></a>
                 <div class="container collapse" id="publications">
                     <a onclick="showContent('visionsofchange')" href="#visionsofchange">Change Forward 2021-22 - Visions of Change</a>
+                </div>
+                <a class="talksCollapse" data-bs-toggle="collapse" href="#talks" role="button" aria-expanded="false" aria-controls="talks">Talks <i class="rotate fa fa-caret-down"></i></a>
+                <div class="container collapse" id="talks">
+                    <a onclick="showContent('svmeetup2023')" href="#svmeetup2023">Bridging Communication Gaps Between Students & Administration</a>
                 </div>
                 <a onclick="showContent('contact')" href="#contact">Contact</a>
             </div>
@@ -61,6 +65,14 @@
             <br>
         </div>
         <br>
+        <div class = "content text-left align-items-center fluid-container svmeetup2023" id="svmeetup2023">
+            <div class = "text-center aboutContainer container w-80">
+                <p class="fade-text titleText">Bridging Communication Gaps Between Students & Administration</p>
+                <iframe class="fade-text" width="70%" height="315" src="https://www.youtube.com/embed/V0us4WLxmUo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <p class="fade-text">Isaiah Freeman, a University Innovation Fellow at Virginia State University, spoke to 300 attendees of the 2023 Silicon Valley Meetup at Stanford University, which took place March 24-26,2023. The Meetup brings together University Innovation Fellows and Faculty Champions from higher education instiutions around the world for several days of immersive learning experiences.</p>
+                <p class="fade-text">Learn more at <a href="https://universityinnovationfellows.org" target="_blank">University Innovation Fellows</a>.</p>
+            </div>
+        </div>
         <div class="content text-left align-items-center fluid-container contact" id="contact">
             <div class=" fade-in text-center aboutContainer container w-80">
                 <p class="titleText">Contact Me</p>
@@ -83,10 +95,9 @@
                 <p class="fade-text">Full Stack Engineering and AI @ Virginia State | Stanford University Innovation Fellow | Google CSRMP'23A</p>
                 <img class="fade-text" src="ProPhoto.jpg" width="200" height="200">
                 <div class="aboutContent fade-text container">
-                    <p>I am a current student at Virginia State University majoring in computer science with the intent to receive a bachelor's degree. I am a Stanford University Innovation Fellow, National Action Council for Minorities in Engineering Scholar, and a junior full-stack developer.</p>
-                    <p>My primary skills include backend programming in Java and Python and frontend experience with JavaScript, HTML, and CSS. I have experience with web application frameworks like Flask, and server management through Amazon Web Services and MongoDB.</p>
-                    <p>As a Stanford University Innovation Fellow, I am gladly tasked to provide change within my college campus (Virginia State University) by introducing and/or increasing the innovation and entrepreneurship (I&E) landscape for students and faculty alike.</p>
-                    <p>I have participated in a program at the University of Kentucky, sponsored by Google, where I learned machine learning and deep learning concepts and applied this eduction to a hands-on project with a team. I led a team in creating the Freeman-Wilson-Delgado-Ellis (FWDE) Model, a model meant to analyze MRI images and isolate locations of certain thigh muscles.</p>
+                    <p>I am a current student at Virginia State University majoring in computer science with the intent to receive a bachelor's degree.</p>
+                    <p>I am a Stanford University Innovation Fellow, where it is my task to promote change both on-campus as well as nationally.</p>
+                    <p>I have had the wondrous opportunity to speak at Stanford both as a message of inspiration and to display my project Priam, a web application menat to rethink the feedback process in educational institutions.</p>
                     <div class="container row">
                         <div class="col">
                             <a href="https://github.com/KingTechnician" target="_blank" rel="noreferrer noopener" class="btn btn-primary" ><i class="fa fa-4x fa-github"></i></a>
@@ -112,25 +123,33 @@
                     <p>Categories can be added to the posts to better organize the nature of their requests.</p>
                     <p>Other users have the ability to view these public posts and have the option to upvote them.</p>
                     <p>These posts are anonymous. No one will know that you posted it. There are no comments. No one can dismiss your request. The only metric is the upvote button.</p>
-                    <a href="https://github.com/KingTechnician/priam" target="_blank" rel="noreferrer noopener" class="btn btn-primary" >More Information</a>
+                    <a href="https://github.com/KingTechnician/priam" target="_blank" rel="noreferrer noopener" class="btn btn-primary" >Github Repository</a>
                 </div>
                 <br>
                 <br>
             </div>
         </div>
-        <div class="content text-center fluid-container healthwhiz" id="healthwhiz">
+        <div class="content text-center fluid-container ispeak" id="ispeak">
             <div class=" text-center aboutContainer container w-80">
-                <p class="titleText">The Health Whiz</p>
+                <p class="titleText">Ispeak</p>
                 <div class="fade-text aboutContent container">
-                    <p>HealthWhiz is a website that tabulates and makes COVID data readily available and accessible from the CDC website. Includes high-level visulatizations through Amcharts.</p>
-                    <p>Created during a Hackathon and was awarded second place.</p>
-                    <p>Note: Project is undergoing a major overhaul.</p>
-                    <a href = "https://github.com/KingTechnician/TheHealthWhiz" target="_blank" rel="noreferrer noopener" class="btn btn-primary" >More Information</a>
+                    <p>Ispeak is an Android application meant to read text from captured images and read them out to the user, with the primary audience being people with low-vision.</p>
+                    <p>Includes several different color schemes for the user to choose from.</p>
+                    <p>Capable of translating languages that are read from the screen.</p>
+                    <p>Created as a final project for the Android Development course taught by Codepath.</p>
+                    <a href = "https://github.com/KingTechnician/eyespeak" target="_blank" rel="noreferrer noopener" class="btn btn-primary" >Github Repository</a>
                 </div>
             </div>
         </div>
-        <div class="content text-center fluid-container neit" id="neit">
-            <p>More Information Coming Soon!</p>
+        <div class="content text-center fluid-container emissiowl" id="emissiowl">
+            <div class=" text-center aboutContainer container w-80">
+                <p class="titleText">Emissiowl</p>
+                <div class="fade-text aboutContent container">
+                    <p>Data from the Environmental Protection Agency provides insight into point source pollution across the nation. However, the manner this data is accessed is often slow and not visually appealing.</p>
+                    <p> Emissiowl is an open-source web application for presenting data on tracked factories, mills, and other facilities' waste collected by the Environmental Protection Agency in the United States. It presents this data in the form of a map, and dispalys details regarding these locations such as prominent chemicals, city and state, amount of polluition, and other important metrics.</p>
+                    <a href="https://github.com/KingTechnician/emissiowl" target="_blank" rel="noreferrer noopener" class="btn btn-primary" >GitHub Repository</a>
+                </div>
+            </div>
         </div>
         <div class="content text-center fluid-container haro" id="haro">
             <p>More Information Coming Soon!</p>
@@ -158,8 +177,8 @@
                     <p>On page 93, we conclude the 2nd volume of the excellent publication Change Forward, a journal from the <a href="https://www.linkedin.com/company/hasso-plattner-institute-of-design-at-stanford/" target="_blank" rel="noreferrer noopener"> Hasso Plattner Institute of Design at Stanford ( d.school )</a>, meant to document the work ethic, continued learning, and development of Fellows.</p>
                     <p>The years 2021 and 2022 have been very surreal for me. Exactly a year ago, I was a freshman at Virginia State University, just beginning my first steps as a software engineer, college student, and adult. A few months before that, I was a high school student deciding the ideal places to apply for college. I still feel like that high school senior in some ways. In other ways, I can feel meaningful growth and maturation. I see the same growth in LaQuawne, and in many other classmates I study with daily.</p>
                     <p>Many thanks to <a href="https://www.linkedin.com/in/joseph-shelton-89022a27/" target="_blank" rel="noreferrer noopener" >Dr. Joseph Shelton</a> for continually serving as my Faculty Champion and encouraging me forward. I would also like to thank <a href="https://www.linkedin.com/in/laurie-moore-7331704/" target="_blank" rel="noreferrer noopener" >Ms. Laurie Moore</a> and <a href="https://www.linkedin.com/in/humerafasihuddin/" target="_blank" rel="noreferrer noopener" >Humera ⭐️ Fasihuddin</a> for allowing me to share my thoughts, realizations, and next steps on the road to creating lasting change at Virginia State University.</p>
-                    <p>In my article section, I detai la new focus for change. The culmination of my work is soon to come. I encourage you to read our article and explore the journal in general to garner new perspectives from all over the globe.</p>
-                    <p>Collective growth never stops. neither will I.</p>
+                    <p>In my article section, I detail a new focus for change. The culmination of my work is soon to come. I encourage you to read our article and explore the journal in general to garner new perspectives from all over the globe.</p>
+                    <p>Collective growth never stops. emissiowlher will I.</p>
                 </div>
                 <br>
                 <br>
