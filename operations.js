@@ -57,11 +57,11 @@ var primaryColor = "#6c7088"
 var secondaryColor = "#4F4F51"
 //#4F4F51 - 79, 79, 81
 
-var nameArray = ["ispeak","pard","bridge","svmeetup2023","priam","about","fwdemodel","visionsofchange","myresume","contact"]
+var nameArray = ["ispeak","pard","bridge","svmeetup2023","priam","about","fwdemodel","visionsofchange","visionsofchange2","myresume","contact"]
 
 var currentColor = undefined
 
-var colorDictionary = {"svmeetup2023":"#bd8a60","ispeak":"#2c2a38","pard":"#00695c","bridge":"#5e4279","priam":"#384bb4","about":"#6c7088","fwdemodel":"#527942","visionsofchange":"#795042","myresume":"#794242","contact":"#a33b4a"}
+var colorDictionary = {"svmeetup2023":"#bd8a60","ispeak":"#2c2a38","pard":"#00695c","bridge":"#5e4279","priam":"#384bb4","about":"#6c7088","fwdemodel":"#527942","visionsofchange":"#795042","visionsofchange2":"#795042","myresume":"#794242","contact":"#a33b4a"}
 //#794242 - 121, 66, 66
 //#425a79 - 66, 90, 121
 //#5e4279 - 94, 66, 121
