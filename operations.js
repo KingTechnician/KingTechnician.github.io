@@ -18,7 +18,11 @@ $(document).ready(function()
     setTimeout(()=>
     {
         $(".aboutContainer").css("display","block");
-        $(".menuButton").css("display","block")},1000);
+        $(".menuButton").css("display","block")
+        //Ensure that #about is displayed
+        showContent("about");
+    },1000);
+
 })
 
 var fullWidth = window.outerWidth;
