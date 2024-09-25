@@ -1,171 +1,367 @@
-//Delete everything in caches
-
-function deleteCaches()
-{
-    caches.keys().then(function(names) {
-        for (let name of names)
-        caches.delete(name);
-    });
-}
-
-
-deleteCaches()
-
-$(document).ready(function()
-{
-    setTimeout(()=>{$("#splash-screen").fadeOut(800)},1000);
-    //Set all aboutContainer display to block
-    setTimeout(()=>
-    {
-        $(".aboutContainer").css("display","block");
-        $(".menuButton").css("display","block")
-        //Ensure that #about is displayed
-        showContent("about");
-    },1000);
-
-})
-
-var fullWidth = window.outerWidth;
-var currentSideWidth = parseInt(document.getElementsByClassName("sidenav")[0].offsetWidth)+25;
-
-document.getElementById("linkedin").addEventListener("click",function()
-{
-    window.open("https://www.linkedin.com/in/isaiah-freeman-3471b2211",target="_blank",rel="noopener noreferrer");
-});
-
-document.getElementById("github").addEventListener("click",function()
-{
-    window.open("https://github.com/KingTechnician/",target="_blank",rel="noopener noreferrer");
-});
-
-function responsiveLayout()
-{
-    document.querySelectorAll(".content").forEach(function(element)
-    {
-        //element.style.marginLeft =(currentSideWidth)+"px";
-        //currentSideWidth = parseInt(element.style.marginLeft);
-    })
-}
-
-$(document).ready(function()
-{
-    var changeLayout = setInterval("responsiveLayout()",10)
-});
-
-
-
-var selectionColors = ["#794242","#425a79"]
-
-var primaryColor = "#6c7088"
-
-var secondaryColor = "#4F4F51"
-//#4F4F51 - 79, 79, 81
-
-var nameArray = ["ispeak","pard","bridge","svmeetup2023","priam","about","fwdemodel","visionsofchange","visionsofchange2","myresume","contact"]
-
-var currentColor = undefined
-
-var colorDictionary = {"svmeetup2023":"#bd8a60","ispeak":"#2c2a38","pard":"#00695c","bridge":"#5e4279","priam":"#384bb4","about":"#6c7088","fwdemodel":"#527942","visionsofchange":"#795042","visionsofchange2":"#795042","myresume":"#794242","contact":"#a33b4a"}
-//#794242 - 121, 66, 66
-//#425a79 - 66, 90, 121
-//#5e4279 - 94, 66, 121
-//#384bb4 - 56, 75, 180
-//#6c7088 - 108, 112, 136
-//#527942 - 82, 121, 66
-//var colorRGBDictionary = {"ispeak":{r:121,g:66,b:66},"pard":{r:66,g:90,b:121},"bridge":{r:94,g:66,b:121},"priam":{r:56,g:75,b:180},"about":{r:108,g:112,b:136},"fwdemodel":{r:82,g:121,b:66}}
-
-function openNav() {
-    document.getElementById("myNav").style.width = "100%";
-    document.getElementById("myNav").style.height = "100%";
-    document.getElementById("myNav").style.background="linear-gradient(-90deg, "+primaryColor+", "+secondaryColor+")";
-  }
-  
-  function closeNav() {
-    document.getElementById("myNav").style.width = "0%";
-    document.getElementById("myNav").style.height="0%";
-    document.getElementById("myNav").style.background="transparent";
-  }
-
-
-function prepareCollapseAnimation(className)
-{
-    var collapseElements = document.getElementsByClassName(className);
-
-    for (var i = 0; i<collapseElements.length;i++)
-    {
-        var caretObject = collapseElements[i].children[0]
-        collapseElements[i].addEventListener("click", function()
-        {
-            if(caretObject.style.transform!=="rotate(180deg)")
-            {
-                caretObject.style.transform="rotate(180deg)"
-                caretObject.style.MozTransform="rotate(180deg)"
-                caretObject.style.WebkitTransform="rotate(180deg)"
-                caretObject.style.msTransform="rotate(180deg)"
-            }
-            else
-            {
-                caretObject.style.transform="";
-                caretObject.style.MozTransform=""
-                caretObject.style.WebkitTransform=""
-                caretObject.style.msTransform=""
-            }
+// Delete caches to ensure fresh content
+function deleteCaches() {
+    if ('caches' in window) {
+        caches.keys().then(function(names) {
+            for (let name of names) caches.delete(name);
         });
     }
 }
 
+deleteCaches();
+
+// Array of experience objects
+var experiences = [
+    {
+        name:"anubis",
+        title:"Anubis - Artificial Neural Understanding for Better Insitutional Success",
+        content:`
+            <div class="text-center aboutContainer container w-80">
+                <p class="fade-text titleText">Anubis - Artificial Neural Understanding for Better Insitutional Success</p>
+                <p class="fade-text"> ANUBIS is an advanced text analytics platform designed to provide comprehensive insights from textual data through sentiment analysis, entity recognition, and topic modeling. By leveraging state-of-the-art natural language processing (NLP) techniques and integrating with powerful machine learning models, ANUBIS offers a scalable solution for businesses and researchers seeking to extract meaningful patterns and trends from large volumes of text.</p>
+                <p class="fade-text"> The advantage from ANUBIS comes from its advanced inference model. ANUBIS has customized ways of using text classification models (BERT, RoBERTa, etc.), text generation models from Huggingface (Llama 3.1, Wizard LM, etc.), and even OpenAI client-compatible LLM APIs (GPT-4, Claude, Together.ai, etc.).</p>
+                <p class="fade-text"> Results from the legacy version of ANUBIS are available from the following site:</p>
+                <p class= "fade-text"><a href="https://anubis-for-the-world.netlify.app/" target="_blank" rel="noreferrer noopener">Anubis Legacy Site</a></p>
+                <p class="fade-text"> This site displays data pulled publicly from the Gradreports website, which contains reviews from hundreds of colleges across the United States.</p>
+                <p class="fade-text"> Sentiment averages, representative examples, and topic modeling were all generated by ANUBIS.</p>
+                <p class="fade-text"> A new web-based API is under private preview for now. Please contact Isaiah for any business inquiries.</p>
+            </div>
+        `,
+        color:"#6c7088"
+    },
+    {
+        name:"newgoodtrouble",
+        title:"The New Good Trouble - Honors Convocation at Virginia State University",
+        content:` 
+                <div class = "text-center aboutContainer container w-80">
+                    <p class = "fade-text titleText">The New Good Trouble - Honors Convocation at Virginia State University</p>
+                    <p class="fade-text">I was awarded Junior of the Year by none other than Virginia State University's Honor's College.</p>
+                    <p class="fade-text">Yet during my acceptance speech, I was compelled to talk about a grander topic near and dear to me.</p>
+                    <p class="fade-text">Ever since learning about AI, I have had a strong interest in finding ways to make use of this complex technology for others. However, while doing this, I also have seen various accounts of AI being used in a way that promotes historical bias. In the wake of how powerful and prevalent AI has become, I haven't yet seen an open discussion about this technology at Virginia State University.</p>
+                    <p class = "fade-text">Work from organizations such as the The Algorithmic Justice League and The Distributed AI Research Institute (DAIR), and from talented individuals such as Dr. Joy Buolamwini and Timnit Gebru were some inspirations for this talk.</p>
+                    <p class = "fade-text">How can we utilize HBCUs to promote a new generation of AI-aware changemakers?</p>
+                    <p class = "fade-text">Are there ways we can incorporate HBCU students, regardless of major, into programs that allow them to contribute to AI for all?</p>
+                    <p class = "fade-text">As I get close to the end of the spring semester, let's see if we can start to answer these questions at Virginia State University.</p>
+                    <p class  = "fade-text">"How we keep the world responsible for artificial intelligence is the new Good Trouble"</p>
+                    <iframe width="70%" height="315" src="https://www.youtube.com/embed/wtAQqsBfK8c?si=Cl1Fw0j54Swg5I70" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+        `,
+        color:"#6c7088"
+    },
+    {
+        name: "svmeetup2023",
+        title: "Bridging Communication Gaps Between Students & Administration",
+        content: `
+            <div class="text-center aboutContainer container w-80">
+                <p class="fade-text titleText">Bridging Communication Gaps Between Students & Administration</p>
+                <iframe class="fade-text" width="70%" height="315" src="https://www.youtube.com/embed/V0us4WLxmUo" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+                <p class="fade-text">Isaiah Freeman, a University Innovation Fellow at Virginia State University, spoke to 300 attendees of the 2023 Silicon Valley Meetup at Stanford University, which took place March 24-26, 2023. The Meetup brings together University Innovation Fellows and Faculty Champions from higher education institutions around the world for several days of immersive learning experiences.</p>
+                <p class="fade-text">Learn more at <a href="https://universityinnovationfellows.org" target="_blank">University Innovation Fellows</a>.</p>
+            </div>
+        `,
+        color: "#bd8a60"
+    },
+    {
+        name: "contact",
+        title: "Contact Me",
+        content: `
+            <div class="fade-in text-center aboutContainer container w-80">
+                <p class="titleText">Contact Me</p>
+                <form action="https://formspree.io/f/xlekevpg" method="POST">
+                    <div class="fade-text form-group">
+                        <label for="inputEmail">Email address</label>
+                        <input type="email" name="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" placeholder="Your email">
+                    </div>
+                    <div class="fade-text2 form-group">
+                        <label for="inputMessage">Message</label>
+                        <textarea height="500" name="message" class="form-control" id="inputMessage" placeholder="What would you like to tell me?"></textarea>
+                    </div>
+                    <button type="submit" class="fade-text4 btn btn-primary">Submit</button>
+                </form>
+            </div>
+        `,
+        color: "#a33b4a"
+    },
+    {
+        name: "about",
+        title: "About Me",
+        content: `
+            <div class="text-center aboutContainer container w-80">
+                <p class="fade-text titleText">Isaiah Freeman (KingTechnician)</p>
+                <p class="fade-text">Founding President & Technical Lead of Google Developer Student Club @ Virginia State | Stanford UIF | Stanford Research Fellow | Entrepreneur | Junior | Full Stack Engineering & AI</p>
+                <img class="fade-text" src="StanfordPhoto.jpg" width="200" height="200">
+                <div class="aboutContent fade-text container">
+                    <p>Innovator with a passion to create change through social impact and current technologies. Skills are spread within the fields of full stack development, computer vision, and natural language processing. Trained in design thinking to create change at Virginia State University. Creator and sole developer of the Priam application, a web application for handling student feedback for educational institutions.</p>
+                    <p>Currently acting as President and Technical Lead for the Google Developer Student Club at Virginia State University.</p>
+                    <div class="container row">
+                        <div class="col">
+                            <a href="https://github.com/KingTechnician" target="_blank" rel="noreferrer noopener" class="btn btn-primary"><i class="fa fa-4x fa-github"></i></a>
+                        </div>
+                        <div class="col">
+                            <a href="https://www.linkedin.com/in/isaiah-freeman-3471b2211/" target="_blank" rel="noreferrer noopener" class="btn btn-primary"><i class="fa fa-4x fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `,
+        color: "#6c7088"
+    },
+    {
+        name: "priam",
+        title: "Priam",
+        content: `
+            <div class="text-center aboutContainer container w-80">
+                <p class="titleText">Priam</p>
+                <div class="fade-text aboutContent container">
+                    <p>Virginia State University has numerous resources to ensure a full and valuable student experience, but there remains to be a centralized platform for viewing a well-managed tally of feedback from students.</p>
+                    <p>A solution presented by me, Isaiah Freeman, is Priam, a web application that has the goal of making the desires of students more visible to faculty and administration at Virginia State University.</p>
+                </div>
+                <p class="titleText">How?</p>
+                <div class="fade-text aboutContent container">
+                    <p>The Priam web application is simple; you might consider it a voting system. Students have the ability to create an account, and propose changes they would like to make to the university in a short post.</p>
+                    <p>Categories can be added to the posts to better organize the nature of their requests.</p>
+                    <p>Other users have the ability to view these public posts and have the option to upvote them.</p>
+                    <p>These posts are anonymous. No one will know that you posted it. There are no comments. No one can dismiss your request. The only metric is the upvote button.</p>
+                    <a href="https://github.com/KingTechnician/priam" target="_blank" rel="noreferrer noopener" class="btn btn-primary">Github Repository</a>
+                </div>
+                <br>
+                <br>
+            </div>
+        `,
+        color: "#384bb4"
+    },
+    {
+        name: "ispeak",
+        title: "Ispeak",
+        content: `
+            <div class="text-center aboutContainer container w-80">
+                <p class="titleText">Ispeak</p>
+                <div class="fade-text aboutContent container">
+                    <p>Ispeak is an Android application meant to read text from captured images and read them out to the user, with the primary audience being people with low vision.</p>
+                    <p>Includes several different color schemes for the user to choose from.</p>
+                    <p>Capable of translating languages that are read from the screen.</p>
+                    <p>Created as a final project for the Android Development course taught by Codepath.</p>
+                    <a href="https://github.com/KingTechnician/eyespeak" target="_blank" rel="noreferrer noopener" class="btn btn-primary">Github Repository</a>
+                </div>
+            </div>
+        `,
+        color: "#2c2a38"
+    },
+    {
+        name: "pard",
+        title: "Pard",
+        content: `
+            <div class="text-center aboutContainer container w-80">
+                <p class="titleText">Pard</p>
+                <div class="fade-text aboutContent container">
+                    <p>An application that accesses a custom Langchain OpenAI instance that gives information and advice regarding the video game "Monster Hunter World" and its expansion, "Monster Hunter World: Iceborne."</p>
+                    <p>Created with Flutter and supported on Web and Android. Only available on web for the time being.</p>
+                    <a href="https://github.com/KingTechnician/pard" target="_blank" rel="noreferrer noopener" class="btn btn-primary">GitHub Repository</a>
+                </div>
+            </div>
+        `,
+        color: "#00695c"
+    },
+    {
+        name: "fwdemodel",
+        title: "FWDE Model",
+        content: `
+            <div class="fade-text text-center aboutContainer container w-80">
+                <p class="titleText">Freeman-Wilson-Delgado-Ellis Model</p>
+                <div class="fade-text aboutContent container">
+                    <p>At the University of Kentucky Health Center, muscle injuries are commonplace, occurring for people who experience an accident or an athlete who gets injured in the intensity of their sport. While MRI imaging can provide a deep understanding of the nature of the injury, it can be more difficult to differentiate thigh muscles. These partitions are often made by hand, which is time-consuming and subject to human error. The solution would be to have an automated way of recognizing the shapes of thigh muscles and highlight them in a way that can be useful for diagnoses and treatments.</p>
+                    <p>Our project's goal was to provide a basis through which the UK Health Department can automatically identify muscles of the thigh. In our two-week-long work, we were tasked with creating a model to isolate the vastus lateralis, a muscle located on the lateral side of the thigh.</p>
+                    <p>The Freeman-Wilson-Delgado-Ellis (FWDE) model was trained with images from real subjects of varying thigh sizes and time frames. Our model enacts a process of classifying images pixel-by-pixel, referred to commonly as image segmentation. Using the U-Net architecture, our model downscales the images after each layer, then upscales them into a matrix of classification values, or binary masks. These binary masks, when overlaid on the original image, will highlight the area of interest where the vastus lateralis is located.</p>
+                    <p>Provided that we can identify the vastus lateralis reliably enough, the next steps would be for the UK Health Center to train the FWDE Model to identify more muscles of the thigh.</p>
+                    <p>Libraries used include Tensorflow (through Keras and Tensorflow Datasets), Numpy, Scipy, and Matplotlib.</p>
+                    <p>The GitHub repository for this project, at this time, is private, as confidential patient data is privatized appropriately.</p>
+                </div>
+            </div>
+        `,
+        color: "#527942"
+    },
+    {
+        name: "visionsofchange",
+        title: "Change Forward 2021-22 - Visions of Change",
+        content: `
+            <div class="fade-text text-center aboutContainer container w-80">
+                <p class="titleText">Change Forward 2021-22 - Visions of Change</p>
+                <div class="fade-text aboutContent container">
+                    <p>The welcome of change starts with diverse conversations.</p>
+                    <p>The process of making change begins with the collective.</p>
+                    <p>As Stanford University Innovation Fellows, myself and <a href="https://www.linkedin.com/in/laquawne-depriest-86412012a/" target="_blank" rel="noreferrer noopener">LaQuawne DePriest</a> were given the opportunity to share what we want fellow scholars of innovation to know. We chose the above two sentences as the basis of our article, "Visions of Change."</p>
+                    <p>On page 93, we conclude the 2nd volume of the excellent publication Change Forward, a journal from the <a href="https://www.linkedin.com/company/hasso-plattner-institute-of-design-at-stanford/" target="_blank" rel="noreferrer noopener">Hasso Plattner Institute of Design at Stanford (d.school)</a>, meant to document the work ethic, continued learning, and development of Fellows.</p>
+                    <p>The years 2021 and 2022 have been very surreal for me. Exactly a year ago, I was a freshman at Virginia State University, just beginning my first steps as a software engineer, college student, and adult. A few months before that, I was a high school student deciding the ideal places to apply for college. I still feel like that high school senior in some ways. In other ways, I can feel meaningful growth and maturation. I see the same growth in LaQuawne, and in many other classmates I study with daily.</p>
+                    <p>Many thanks to <a href="https://www.linkedin.com/in/joseph-shelton-89022a27/" target="_blank" rel="noreferrer noopener">Dr. Joseph Shelton</a> for continually serving as my Faculty Champion and encouraging me forward. I would also like to thank <a href="https://www.linkedin.com/in/laurie-moore-7331704/" target="_blank" rel="noreferrer noopener">Ms. Laurie Moore</a> and <a href="https://www.linkedin.com/in/humerafasihuddin/" target="_blank" rel="noreferrer noopener">Humera ⭐️ Fasihuddin</a> for allowing me to share my thoughts, realizations, and next steps on the road to creating lasting change at Virginia State University.</p>
+                    <p>In my article section, I detail a new focus for change. The culmination of my work is soon to come. I encourage you to read our article and explore the journal in general to garner new perspectives from all over the globe.</p>
+                    <p>Collective growth never stops. Neither will I.</p>
+                </div>
+                <br>
+                <br>
+                <div class="aboutContent container">
+                    <a href="https://issuu.com/uifellows/docs/uif_impact_journal_2021-2022_-_with_presets_new/94" target="_blank" rel="noreferrer noopener" class="btn btn-primary">View Publication</a>
+                </div>
+            </div>
+        `,
+        color: "#795042"
+    },
+    {
+        name: "visionsofchange2",
+        title: "Change Forward 2022-23 - Rethinking Feedback",
+        content: `
+            <div class="fade-text text-center aboutContainer container w-80">
+                <p class="titleText">Change Forward 2022-23 - Rethinking Feedback</p>
+                <div class="fade-text aboutContent container">
+                    <p>Each fall always gives me a small moment of thought about what's occurred in both my personal and professional life. Two years ago, I was a freshman, a bit certain about computer science but unsure of where I would land.</p>
+                    <p>For a long time, up to just a month ago, I battled with the idea of what title I really under. A full stack engineer? A software engineer? Machine learning engineer? Researcher?</p>
+                    <p>Then I remembered the core of why I can identify with all those titles in the first place:</p>
+                    <p>I empathize.</p>
+                    <p>I ask.</p>
+                    <p>I create.</p>
+                    <p>I test.</p>
+                    <p>I meditate on the results.</p>
+                    <p>Repeat.</p>
+                    <p>And what I learn during that becomes mental skills that I can keep training the more I create. The mind needs passion, and passion needs the mind.</p>
+                    <p>I'm honored that the University Innovation Fellows and, by extension, the Hasso Plattner Institute of Design at Stanford (d.school), gave me an article spot in this year's Change Journal, where I get to talk about my design process in between meditation and repetition. I hope it gives some comfort to change makers that found themselves in the same uncertain transition phase I was in.</p>
+                    <p>Priam has the potential to be a valuable solution and, in some ways, has become my training tool to become a better designer of software.</p>
+                    <p>Its progress has been stagnant at 70%, due to projects and classes. But let's see if I can get that to 100% by 2024.</p>
+                    <p>It's been a journey seeing the growth of skills I've gained in each creation and restart of its code. The images below are the first two versions I created.</p>
+                    <p>How does its next version look?</p>
+                    <iframe class="fade-text" width="70%" height="315" src="https://www.youtube.com/embed/9TwKXNe383U?si=HpEFWBeBWYLXLpyN" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <br>
+                <br>
+                <div class="aboutContent container">
+                    <a href="https://issuu.com/uifellows/docs/change_forward_2022-23/88" target="_blank" rel="noreferrer noopener" class="btn btn-primary">View Publication</a>
+                </div>
+            </div>
+        `,
+        color: "#795042"
+    },
+    {
+        name: "myresume",
+        title: "My Resume",
+        content: `
+            <div class = "text-center aboutContainer container w-80">
+            <iframe width="90%" height="680px" src="https://drive.google.com/file/d/1yur7i0LXFKK11m4vcKXBlVIQGDpeF7A0/preview"></iframe>
+            </div>
+        `,
+        color: "#794242"
+    }
+];
+
+// Generate nameArray and colorDictionary based on experiences array
+var nameArray = experiences.map(function(exp) {
+    return exp.name;
+});
+
+var colorDictionary = {};
+experiences.forEach(function(exp) {
+    colorDictionary[exp.name] = exp.color;
+});
+
+// Existing variables
+var primaryColor = "#6c7088";
+var secondaryColor = "#4F4F51";
+
+// Generate the content sections dynamically
+function generateContent() {
+    var container = document.getElementById("experience-container");
+    experiences.forEach(function(exp) {
+        var div = document.createElement("div");
+        div.className = "content text-left align-items-center fluid-container " + exp.name;
+        div.id = exp.name;
+        div.style.display = "none"; // Initially hide all sections
+        div.innerHTML = exp.content;
+        container.appendChild(div);
+    });
+}
+
+// Modify showContent function
+function showContent(name) {
+    for (var i = 0; i < nameArray.length; i++) {
+        var contentDiv = document.getElementById(nameArray[i]);
+        if (name == nameArray[i]) {
+            contentDiv.style.display = "block";
+            document.querySelector("body").style.background = "linear-gradient(-90deg, " + colorDictionary[nameArray[i]] + ", " + secondaryColor + ")";
+            closeNav();
+            document.getElementById("myNav").style.background = "linear-gradient(-90deg, " + colorDictionary[nameArray[i]] + ", " + secondaryColor + ")";
+            primaryColor = colorDictionary[nameArray[i]];
+        } else {
+            contentDiv.style.display = "none";
+        }
+    }
+}
+
+// Call generateContent() when the document is ready
+document.addEventListener("DOMContentLoaded", function() {
+    generateContent();
+    // Existing code...
+    setTimeout(function() {
+        $("#splash-screen").fadeOut(800);
+    }, 1000);
+    // Set all aboutContainer display to block
+    setTimeout(function() {
+        $(".aboutContainer").css("display", "block");
+        $(".menuButton").css("display", "block");
+        // Ensure that #about is displayed
+        showContent("about");
+    }, 1000);
+});
+
+// Event listeners for social icons
+document.getElementById("linkedin").addEventListener("click", function() {
+    window.open("https://www.linkedin.com/in/isaiah-freeman-3471b2211", "_blank", "noopener,noreferrer");
+});
+
+document.getElementById("github").addEventListener("click", function() {
+    window.open("https://github.com/KingTechnician/", "_blank", "noopener,noreferrer");
+});
+
+// Open and close navigation functions
+function openNav() {
+    document.getElementById("myNav").style.width = "100%";
+    document.getElementById("myNav").style.height = "100%";
+    document.getElementById("myNav").style.background = "linear-gradient(-90deg, " + primaryColor + ", " + secondaryColor + ")";
+}
+
+function closeNav() {
+    document.getElementById("myNav").style.width = "0%";
+    document.getElementById("myNav").style.height = "0%";
+    document.getElementById("myNav").style.background = "transparent";
+}
+
+// Prepare collapse animations for menus
+function prepareCollapseAnimation(className) {
+    var collapseElements = document.getElementsByClassName(className);
+
+    for (var i = 0; i < collapseElements.length; i++) {
+        (function(i) {
+            var caretObject = collapseElements[i].children[0];
+            collapseElements[i].addEventListener("click", function() {
+                if (caretObject.style.transform !== "rotate(180deg)") {
+                    caretObject.style.transform = "rotate(180deg)";
+                } else {
+                    caretObject.style.transform = "";
+                }
+            });
+        })(i);
+    }
+}
+
+// Initialize menu button animation
 var menuButton = document.getElementById("menuButton");
 
-menuButton.addEventListener("click",function()
-{
-    if(menuButton.style.transform!=="rotate(180deg)")
-    {
-        menuButton.style.transform="rotate(180deg)"
-        menuButton.style.MozTransform="rotate(180deg)"
-        menuButton.style.WebkitTransform="rotate(180deg)"
-        menuButton.style.msTransform="rotate(180deg)"
-        menuButton.style.transition="transform 0.2s"
-    }
-    else
-    {
-        menuButton.style.transform="";
-        menuButton.style.MozTransform=""
-        menuButton.style.WebkitTransform=""
-        menuButton.style.msTransform=""
+menuButton.addEventListener("click", function() {
+    if (menuButton.style.transform !== "rotate(180deg)") {
+        menuButton.style.transform = "rotate(180deg)";
+        menuButton.style.transition = "transform 0.2s";
+    } else {
+        menuButton.style.transform = "";
     }
 });
 
-function showContent(name)
-{
-  for (var i = 0; i < nameArray.length; i++)
-  {
-      if(name==nameArray[i])
-      {
-          document.getElementById(nameArray[i]).style.display = "block";
-          document.querySelector("body").style.background="linear-gradient(-90deg, "+colorDictionary[nameArray[i]]+", "+secondaryColor+")";
-          closeNav()
-          document.getElementById("myNav").style.background="linear-gradient(-90deg, "+colorDictionary[nameArray[i]]+", "+secondaryColor+")";
-          primaryColor = colorDictionary[nameArray[i]]
-      }
-      else
-      {
-        document.getElementById(nameArray[i]).style.display = "none";
-        closeNav()
-        document.getElementById("myNav").style.background="linear-gradient(-90deg, "+colorDictionary[nameArray[i]]+", "+secondaryColor+")";
-      }
-  }
-}
-
-
+// Prepare collapse animations
 prepareCollapseAnimation("projectCollapse");
-
 prepareCollapseAnimation("researchCollapse");
-
-prepareCollapseAnimation("talksCollapse")
-
-
-
-/*    -ms-transform: rotate(180deg);
-    -moz-transform: rotate(180deg);
-    -webkit-transform: rotate(180deg);
-    transform: rotate(180deg); */
+prepareCollapseAnimation("talksCollapse");
+prepareCollapseAnimation("publicationsCollapse");
