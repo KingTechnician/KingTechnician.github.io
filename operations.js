@@ -26,7 +26,7 @@ var experiences = [
                 <p class="fade-text"> A new web-based API is under private preview for now. Please contact Isaiah for any business inquiries.</p>
             </div>
         `,
-        color:"#6c7088"
+        color:"#ab8c27"
     },
     {
         name:"newgoodtrouble",
@@ -34,6 +34,7 @@ var experiences = [
         content:` 
                 <div class = "text-center aboutContainer container w-80">
                     <p class = "fade-text titleText">The New Good Trouble - Honors Convocation at Virginia State University</p>
+                    <p class = "fade-text"><iframe width="50%" height="415" src="https://www.youtube.com/embed/wtAQqsBfK8c?si=Cl1Fw0j54Swg5I70" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
                     <p class="fade-text">I was awarded Junior of the Year by none other than Virginia State University's Honor's College.</p>
                     <p class="fade-text">Yet during my acceptance speech, I was compelled to talk about a grander topic near and dear to me.</p>
                     <p class="fade-text">Ever since learning about AI, I have had a strong interest in finding ways to make use of this complex technology for others. However, while doing this, I also have seen various accounts of AI being used in a way that promotes historical bias. In the wake of how powerful and prevalent AI has become, I haven't yet seen an open discussion about this technology at Virginia State University.</p>
@@ -42,10 +43,10 @@ var experiences = [
                     <p class = "fade-text">Are there ways we can incorporate HBCU students, regardless of major, into programs that allow them to contribute to AI for all?</p>
                     <p class = "fade-text">As I get close to the end of the spring semester, let's see if we can start to answer these questions at Virginia State University.</p>
                     <p class  = "fade-text">"How we keep the world responsible for artificial intelligence is the new Good Trouble"</p>
-                    <p class = "fade-text"><iframe width="50%" height="415" src="https://www.youtube.com/embed/wtAQqsBfK8c?si=Cl1Fw0j54Swg5I70" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
+                    
                 </div>
         `,
-        color:"#6c7088"
+        color:"#bd8a60"
     },
     {
         name: "svmeetup2023",
@@ -53,7 +54,7 @@ var experiences = [
         content: `
             <div class="text-center aboutContainer container w-80">
                 <p class="fade-text titleText">Bridging Communication Gaps Between Students & Administration</p>
-                <iframe class="fade-text" width="70%" height="315" src="https://www.youtube.com/embed/V0us4WLxmUo" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+                <iframe class="fade-text" width="70%" height="415" src="https://www.youtube.com/embed/V0us4WLxmUo" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
                 <p class="fade-text">Isaiah Freeman, a University Innovation Fellow at Virginia State University, spoke to 300 attendees of the 2023 Silicon Valley Meetup at Stanford University, which took place March 24-26, 2023. The Meetup brings together University Innovation Fellows and Faculty Champions from higher education institutions around the world for several days of immersive learning experiences.</p>
                 <p class="fade-text">Learn more at <a href="https://universityinnovationfellows.org" target="_blank">University Innovation Fellows</a>.</p>
             </div>
