@@ -42,7 +42,7 @@ var experiences = [
                     <p class = "fade-text">Are there ways we can incorporate HBCU students, regardless of major, into programs that allow them to contribute to AI for all?</p>
                     <p class = "fade-text">As I get close to the end of the spring semester, let's see if we can start to answer these questions at Virginia State University.</p>
                     <p class  = "fade-text">"How we keep the world responsible for artificial intelligence is the new Good Trouble"</p>
-                    <iframe width="70%" height="315" src="https://www.youtube.com/embed/wtAQqsBfK8c?si=Cl1Fw0j54Swg5I70" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <p class = "fade-text"><iframe width="50%" height="415" src="https://www.youtube.com/embed/wtAQqsBfK8c?si=Cl1Fw0j54Swg5I70" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
                 </div>
         `,
         color:"#6c7088"
