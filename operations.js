@@ -87,11 +87,22 @@ var experiences = [
         content: `
             <div class="text-center aboutContainer container w-80">
                 <p class="fade-text titleText">Isaiah Freeman (KingTechnician)</p>
-                <p class="fade-text">Founding President & Technical Lead of Google Developer Student Club @ Virginia State | Stanford UIF | Stanford Research Fellow | Entrepreneur | Junior | Full Stack Engineering & AI</p>
+                <p class="fade-text">Ex-SWE Intern @ Google | Stanford Research Fellow | Inventor | Speaker @ Stanford, MIT, & Harvard</p>
                 <img class="fade-text" src="StanfordPhoto.jpg" width="200" height="200">
                 <div class="aboutContent fade-text container">
-                    <p>Innovator with a passion to create change through social impact and current technologies. Skills are spread within the fields of full stack development, computer vision, and natural language processing. Trained in design thinking to create change at Virginia State University. Creator and sole developer of the Priam application, a web application for handling student feedback for educational institutions.</p>
-                    <p>Currently acting as President and Technical Lead for the Google Developer Student Club at Virginia State University.</p>
+                    <p>An inventor of software, AI, and all things digital. My skill is a culmination of a wild journey that lent me varied self-taught aptitude in:</p>
+                    <ul>
+                        <h4>Web & Native development</li>
+                        <h4>Natural language processing</li>
+                        <h4>Computer vision</li>
+                        <h4>Prompt engineering</li>
+                        <h4>Design thinking</li>
+                    </ul>
+                    <p>Speaker at Hasso Plattner Institute of Design @ Stanford in April 2023.</p>
+                    <p>Speaker at GSK regarding research under fellowship w/ Stanford, July 2023.</p>
+                    <p>Speaker w/ Axim Collaborative in partnered event w/ Harvard and MIT, in 2024</p>
+
+                    <p>Future speaker at your event! Don't hesitate to reach out.</p>
                     <div class="container row">
                         <div class="col">
                             <a href="https://github.com/KingTechnician" target="_blank" rel="noreferrer noopener" class="btn btn-primary"><i class="fa fa-4x fa-github"></i></a>
