@@ -1,90 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
-    <title>Isaiah Freeman</title>
-    <!-- Include jQuery, Bootstrap CSS and JS, and your CSS -->
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-..." crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-..." crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="style.css">
-    <!-- Include Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Isaiah Freeman — Interpretability Research</title>
+<meta name="description" content="Isaiah Freeman (KingTechnician) — interpretability and representation engineering research. Cross-model hidden-state transfer, probe-based tool selection, and applied NLP systems.">
+<meta name="color-scheme" content="dark">
+
+<meta property="og:title" content="Isaiah Freeman — Interpretability Research">
+<meta property="og:description" content="I study what language models represent internally, and whether those representations move between them.">
+<meta property="og:type" content="website">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&family=Newsreader:ital,opsz,wght@0,6..72,300..600;1,6..72,300..500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Splash Screen -->
-    <div id="splash-screen">
-        <img src="githublogo.png" width="30%">
-        <p id="kingtech" class="fade-k">K</p><p id="kingtech" class="fade-text">ing</p><p id="kingtech" class="fade-t">T</p><p id="kingtech" class="fade-text">echnician</p>
+
+<!-- ── Splash ─────────────────────────────────────────────── -->
+<div id="splash-screen" role="presentation">
+  <div class="splash__inner">
+    <img src="githublogo.png" alt="" width="46" height="46">
+    <p class="splash__word"><span class="splash__k">K</span>ing<span class="splash__k">T</span>echnician</p>
+    <div class="splash__sweep"></div>
+  </div>
+</div>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- ── Shell ──────────────────────────────────────────────── -->
+<div class="wash" aria-hidden="true"></div>
+
+<div class="shell">
+
+  <!-- Persistent rail (desktop) -->
+  <aside class="rail">
+    <div class="rail__id">
+      <img class="rail__portrait" src="StanfordPhoto.jpg" alt="Isaiah Freeman" width="56" height="56">
+      <div>
+        <p class="rail__name">Isaiah Freeman</p>
+        <p class="rail__handle">KingTechnician</p>
+      </div>
     </div>
 
-    <!-- Main Content -->
-    <div id="main-content">
-        <!-- Navigation Overlay -->
-        <div id="myNav" class="overlay">
-            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-            <div class="overlay-content">
-                <a id="aboutButton" onclick="showContent('about')" href="#about">About Me</a>
-                <a onclick="showContent('myresume')" href="#myresume">My Resume</a>
-                <a class="projectCollapse" data-bs-toggle="collapse" href="#projects" role="button" aria-expanded="false" aria-controls="projects">Projects <i class="rotate fa fa-caret-down"></i></a>
-                <div class="container collapse" id="projects">
-                    <a onclick = "showContent('anubis')" href="#anubis">Anubis</a>
-                    <a onclick="showContent('priam')" href="#priam">Priam</a>
-                    <a onclick="showContent('pard')" href="#pard">Pard</a>
-                    <a onclick="showContent('ispeak')" href="#ispeak">Ispeak</a>
-                </div>
-                <a class="researchCollapse" data-bs-toggle="collapse" href="#research" role="button" aria-expanded="false" aria-controls="research">Research <i class="rotate fa fa-caret-down"></i></a>
-                <div class="container collapse" id="research">
-                    <a onclick="showContent('fwdemodel')" href="#fwdemodel">FWDE Model</a>
-                </div>
-                <a class="publicationsCollapse" data-bs-toggle="collapse" href="#publications" role="button" aria-expanded="false" aria-controls="publications">Publications <i class="rotate fa fa-caret-down"></i></a>
-                <div class="container collapse" id="publications">
-                    <a onclick="showContent('visionsofchange')" href="#visionsofchange">Change Forward 2021-22 - Visions of Change</a>
-                    <a onclick="showContent('visionsofchange2')" href="#visionsofchange2">Change Forward 2022-23 - Rethinking Feedback</a>
-                </div>
-                <a class="talksCollapse" data-bs-toggle="collapse" href="#talks" role="button" aria-expanded="false" aria-controls="talks">Talks <i class="rotate fa fa-caret-down"></i></a>
-                <div class="container collapse" id="talks">
-                    <a onclick="showContent('svmeetup2023')" href="#svmeetup2023">Bridging Communication Gaps Between Students & Administration</a>
-                    <a onclick="showContent('newgoodtrouble')" href="#newgoodtrouble">New Good Trouble</a>
-                </div>
-                <a onclick="showContent('contact')" href="#contact">Contact</a>
-            </div>
-        </div>
+    <p class="rail__role">
+      Interpretability &amp; representation engineering.<br>
+      Independent research under Freethought Labs.
+    </p>
 
-        <!-- Side Navigation -->
-        <div class="sidenav d-flex flex-column flex-shrink-0 p-0">
-            <div class="container personaContainer">
-                <div class="row">
-                    <div class="col">
-                        <img src="StanfordPhoto.jpg" width="90" height="90" style="border-radius:50%;">
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col titleColumn">
-                        <p class="typewriter">Isaiah Freeman (KingTechnician)</p>
-                        <p><i id="linkedin" width="200" height="200" class="fa-2x fa fa-linkedin"></i> & <i id="github" width="200" height="200" class="fa-2x fa fa-github"></i></p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col subColumn">
-                        <p class="professionText">Full Stack Development, Machine Learning, Web Development</p>
-                        <p class="professionText">Sophomore at Virginia State University</p>
-                        <p class="professionText">Stanford University Innovation Fellow</p>
-                    </div>
-                </div>
-            </div>
-            <br>
-        </div>
-        <br>
+    <nav class="rail__nav" id="railNav" aria-label="Sections"></nav>
 
-        <!-- Placeholder for dynamic content -->
-        <div id="experience-container"></div>
-
-        <!-- Menu Button -->
-        <button id="menuButton" onclick="openNav()" class="fade-text menuButton">&#9776;</button>
-
-        <!-- Include operations.js -->
-        <script src="operations.js"></script>
+    <div class="rail__foot">
+      <a class="iconlink" href="https://github.com/KingTechnician" target="_blank" rel="noreferrer noopener" aria-label="GitHub">
+        <svg viewBox="0 0 16 16" width="17" height="17" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8a8 8 0 0 0 5.47 7.59c.4.07.55-.17.55-.38l-.01-1.49c-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.4 7.4 0 0 1 4 0c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48l-.01 2.2c0 .21.15.46.55.38A8 8 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
+      </a>
+      <a class="iconlink" href="https://www.linkedin.com/in/isaiah-freeman-3471b2211" target="_blank" rel="noreferrer noopener" aria-label="LinkedIn">
+        <svg viewBox="0 0 16 16" width="17" height="17" aria-hidden="true"><path fill="currentColor" d="M3.6 5.5H.9V15h2.7V5.5ZM2.25 1A1.56 1.56 0 1 0 2.25 4.12 1.56 1.56 0 0 0 2.25 1ZM15.1 9.7c0-2.6-1.4-3.8-3.26-3.8-1.5 0-2.17.83-2.55 1.4V5.5H6.6c.04.76 0 9.5 0 9.5h2.7V9.7c0-.24.02-.48.09-.65.19-.48.63-.98 1.37-.98.96 0 1.35.74 1.35 1.81V15h2.7V9.7Z"/></svg>
+      </a>
+      <a class="iconlink" href="https://huggingface.co/KingTechnician" target="_blank" rel="noreferrer noopener" aria-label="Hugging Face">
+        <svg viewBox="0 0 16 16" width="17" height="17" aria-hidden="true"><circle cx="8" cy="8" r="6.4" fill="none" stroke="currentColor" stroke-width="1.4"/><circle cx="5.9" cy="6.6" r="1" fill="currentColor"/><circle cx="10.1" cy="6.6" r="1" fill="currentColor"/><path d="M5.3 9.6c.7 1.2 1.7 1.8 2.7 1.8s2-.6 2.7-1.8" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>
+      </a>
     </div>
+  </aside>
+
+  <!-- Stage -->
+  <main class="stage" id="main">
+    <div class="probe" aria-hidden="true">
+      <div class="probe__sticky">
+        <div class="probe__rail" id="probeRail"></div>
+        <p class="probe__readout"><span id="probeLabel">about</span></p>
+      </div>
+    </div>
+    <div class="stage__col" id="experience-container"></div>
+  </main>
+
+</div>
+
+<!-- ── Mobile bar + overlay ───────────────────────────────── -->
+<div class="topbar">
+  <span class="topbar__name">Isaiah Freeman</span>
+  <button id="menuButton" class="menuButton" aria-expanded="false" aria-controls="myNav">Menu</button>
+</div>
+
+<div id="myNav" class="overlay" role="dialog" aria-modal="true" aria-label="Navigation" hidden>
+  <button class="closebtn" id="closeNavBtn" aria-label="Close navigation">&times;</button>
+  <div class="overlay-content" id="overlayNav"></div>
+</div>
+
+<script src="operations.js"></script>
 </body>
 </html>
