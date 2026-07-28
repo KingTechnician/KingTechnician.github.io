@@ -90,7 +90,7 @@ var SECTIONS = [
   eyebrow: "Freethought Labs &middot; working paper",
   color: "#3FB6A3",
   content: `
-    <article class="doc">
+<article class="doc">
       <p class="doc__eyebrow">Freethought Labs &middot; Working paper</p>
       <h1 class="doc__title">PVTS</h1>
       <p class="doc__sub">Probe-based, pre-verbal tool selection from hidden states</p>
@@ -105,6 +105,7 @@ var SECTIONS = [
         <li><strong>Pre-verbal readout.</strong> The tool decision is extracted from activations, not from generated text.</li>
         <li><strong>Interpretability as a routing mechanism.</strong> The probe is the router, so the mechanism you use in production is the same one you inspect.</li>
         <li><strong>Connects to non-autoregressive structured decoding</strong> &mdash; if the structural choice is available upfront, the sequential generation of that structure becomes optional.</li>
+        <li><strong>A mid-stack read transplants across model sizes.</strong> The same hidden-state readout, taken from a 3&ndash;8B model, can be handed to a sub-2B model as a hint &mdash; lifting its tool-selection accuracy to near that of the much larger model, at a fraction of the cost of a full decode.</li>
       </ul>
 
       <p>Independent work under <strong>Freethought Labs</strong>, currently being prepared for a workshop submission.</p>
