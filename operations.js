@@ -55,7 +55,7 @@ var SECTIONS = [
     <article class="doc">
       <p class="doc__eyebrow">Research &middot; First author &middot; Accepted at NeurIPS 2026</p>
       <h1 class="doc__title">Shared Truth</h1>
-      <p class="doc__sub">Cross-model transfer of truth representations, measured across 24 model pairs</p>
+      <p class="doc__sub">Cross-model transfer of truth representations, measured across 21 model pairs</p>
 
       <p class="doc__lede">If a linear direction for truthfulness exists in one model's residual stream, does it survive being mapped into another model &mdash; and does the receiving model get <em>better</em> at telling true from false when it arrives?</p>
 
