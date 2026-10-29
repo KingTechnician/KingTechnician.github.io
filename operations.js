@@ -49,11 +49,11 @@ var SECTIONS = [
 {
   name: "shared-truth",
   navLabel: "Shared Truth",
-  eyebrow: "Research &middot; first author &middot; under review",
+  eyebrow: "Research &middot; first author &middot; accepted at NeurIPS 2026",
   color: "#5B8DEF",
   content: `
     <article class="doc">
-      <p class="doc__eyebrow">Research &middot; First author &middot; Under review</p>
+      <p class="doc__eyebrow">Research &middot; First author &middot; Accepted at NeurIPS 2026</p>
       <h1 class="doc__title">Shared Truth</h1>
       <p class="doc__sub">Cross-model transfer of truth representations, measured across 24 model pairs</p>
 
@@ -76,10 +76,15 @@ var SECTIONS = [
 
       <p>Random-weight and shuffled-adapter baselines produce zero improvement under the same protocol, which rules out the reading that any injection at sufficient scale would look like transfer.</p>
 
-      <p>The paper is under peer review. I'm happy to share the manuscript with prospective advisors and collaborators &mdash; reach out and I'll send it over. Code to reproduce the experiments will be released.</p>
+      <p>The paper has been accepted at <strong>NeurIPS 2026</strong>. The full paper is embedded below, and the poster entry is on the NeurIPS site. Code to reproduce the experiments are located <a href="https://github.com/kingtechnician/shared-truth" target="_blank" rel="noreferrer noopener">here</a>.</p>
+
+      <div class="media media--doc">
+        <iframe src="https://drive.google.com/file/d/1Bh_0VdljLVNTa1gwhbEFX3QRtyShOmHz/preview" title="Shared Truth paper"></iframe>
+      </div>
 
       <div class="btnrow">
-        <a class="btn btn--primary" href="#contact" data-nav="contact">Request the paper</a>
+        <a class="btn btn--primary" href="https://neurips.cc/virtual/2026/loc/atlanta/poster/155266" target="_blank" rel="noreferrer noopener">View the NeurIPS poster</a>
+        <a class="btn" href="https://drive.google.com/file/d/1Bh_0VdljLVNTa1gwhbEFX3QRtyShOmHz/view?usp=sharing" target="_blank" rel="noreferrer noopener">Open the paper in a new tab</a>
       </div>
     </article>
   `
