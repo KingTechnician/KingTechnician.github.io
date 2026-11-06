@@ -25,7 +25,7 @@ var SECTIONS = [
       <p>The through-line across my projects is the same question asked at different scales: if two models learn the same concept, do they encode it the same way &mdash; and can you carry a probe, a direction, or a decision from one to the other without retraining anything?</p>
 
       <div class="facts">
-        <div class="facts__row"><div class="facts__k">Now</div><div class="facts__v"><strong>M.S. Computer Science</strong>, Virginia State University &middot; 3.87 &middot; expected August 2026</div></div>
+        <div class="facts__row"><div class="facts__k">Now</div><div class="facts__v"><strong>M.S. Computer Science</strong>, Virginia State University &middot; 3.87 &middot; expected December 2026</div></div>
         <div class="facts__row"><div class="facts__k">Next</div><div class="facts__v"><strong>PhD in computer science</strong> &middot; admissions in progress</div></div>
         <div class="facts__row"><div class="facts__k">Previously</div><div class="facts__v">SWE Intern, <strong>Google Maps</strong> &middot; SWE Intern, <strong>YouTube Trust &amp; Safety</strong></div></div>
         <div class="facts__row"><div class="facts__k">Focus</div><div class="facts__v">Mechanistic interpretability, representation engineering, probe-based analysis of hidden states</div></div>
@@ -71,7 +71,7 @@ var SECTIONS = [
         <li><strong>Injection strength has a plateau and a cliff.</strong> Performance holds near the target's ceiling across a wide range, then collapses toward chance at full strength.</li>
         <li><strong>The collapse is alignment failure, not information loss.</strong> A probe retrained on the adapter's own outputs recovers the signal at high AUROC, while a shuffled control sits at chance &mdash; so the information is still present, just no longer oriented along the direction the model reads.</li>
         <li><strong>The collapse is structured by syntax.</strong> Negated statements degrade most, simple statements less, conjunctions least &mdash; a gradient that suggests what alignment is actually preserving.</li>
-        <li><strong>It replicates.</strong> Multi-seed runs across high-transfer, moderate, and floor-level pairs reproduce the plateau-and-collapse structure in every run.</li>
+        <li><strong>It replicates.</strong> Multi-seed runs across high-transfer, moderate, and floor-level pairs reproduce the plateau-and-collapse structure in every run. These patterns are consistent across four model families (Llama, Mistral, Qwen, and Gemma).</li>
       </ul>
 
       <p>Random-weight and shuffled-adapter baselines produce zero improvement under the same protocol, which rules out the reading that any injection at sufficient scale would look like transfer.</p>
