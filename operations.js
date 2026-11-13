@@ -450,10 +450,10 @@ var SECTIONS = [
       <h1 class="doc__title">Resume</h1>
       <p class="doc__sub">Last updated 2026</p>
       <div class="media media--doc">
-        <iframe src="https://drive.google.com/file/d/1yur7i0LXFKK11m4vcKXBlVIQGDpeF7A0/preview" title="Isaiah Freeman resume"></iframe>
+        <iframe src="https://drive.google.com/file/d/1ZGFXJYix6MHeXCCO-KOSp5iSYHuamjwv/preview" title="Isaiah Freeman resume"></iframe>
       </div>
       <div class="btnrow">
-        <a class="btn" href="https://drive.google.com/file/d/1yur7i0LXFKK11m4vcKXBlVIQGDpeF7A0/view" target="_blank" rel="noreferrer noopener">Open in a new tab</a>
+        <a class="btn" href="https://drive.google.com/file/d/1ZGFXJYix6MHeXCCO-KOSp5iSYHuamjwv/view" target="_blank" rel="noreferrer noopener">Open in a new tab</a>
       </div>
     </article>
   `
